@@ -1,0 +1,110 @@
+/*
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+*/
+
+body {
+  background: #fafafa;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+.corpus{
+	width: 32%;
+	margin-top: 19px;
+    margin-left: 11%;
+    margin-right: -41%;
+    
+}
+acidjs-xtabs,
+acidjs-xtabs acidjs-xtabs-list,
+acidjs-xtabs acidjs-xtabs-item > input:checked ~ acidjs-xtabs-pane
+{
+    display: block;
+}
+ 
+acidjs-xtabs,
+acidjs-xtabs *
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+}
+ 
+acidjs-xtabs acidjs-xtabs-pane,
+acidjs-xtabs acidjs-xtabs-item > input
+{
+    display: none;
+}
+ 
+acidjs-xtabs acidjs-xtabs-pane,
+acidjs-xtabs acidjs-xtabs-item > input:checked + label
+{
+    background: #e44d26;
+}
+ 
+acidjs-xtabs acidjs-xtabs-list,
+acidjs-xtabs acidjs-xtabs-item > label
+{
+    position: relative;
+}
+ 
+acidjs-xtabs
+{
+    font-family: Arial, Verdana, Helvetcia, Sans-serif;
+    color: #fff;
+}
+ 
+acidjs-xtabs acidjs-xtabs-pane
+{
+    position: absolute;
+    padding: 6px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    border: solid 2px #ddd;
+    white-space: normal;
+}
+ 
+acidjs-xtabs acidjs-xtabs-item > label
+{
+    display: inline-block;
+    background: #0091c0;
+    line-height: 32px;
+    padding: 0 18px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 0;
+    margin: 0 1px 0 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+ 
+acidjs-xtabs acidjs-xtabs-item:first-child
+{
+    margin-left: 12px;
+}
+ 
+acidjs-xtabs acidjs-xtabs-item > input:disabled + label
+{
+    background: #ccc;
+    color: #666;
+    opacity: .5;
+    cursor: default;
+}
+ 
+acidjs-xtabs acidjs-xtabs-list
+{
+    white-space: nowrap;
+}

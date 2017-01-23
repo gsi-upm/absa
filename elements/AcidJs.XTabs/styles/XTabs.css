@@ -1,0 +1,100 @@
+/*
+ * Tabs HTML5 Web Component by Martin Ivanov (@wemakesitesnet)
+ * More info regarding this exciting new technology: http://webcomponents.org/, http://www.x-tags.org/, http://www.polymer-project.org/
+ * @author Martin Ivanov
+ * @url developer website: http://wemakesites.net/
+ * @url developer twitter: https://twitter.com/#!/wemakesitesnet
+ * @url developer blog http://acidmartin.wordpress.com/
+ **/
+
+/*
+ * Do you like this solution? Please, donate:
+ * https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QFUHPWJB2JDBS
+ **/
+
+acidjs-xtabs,
+acidjs-xtabs acidjs-xtabs-list,
+acidjs-xtabs acidjs-xtabs-item > input:checked ~ acidjs-xtabs-pane
+{
+    display: block;
+}
+
+acidjs-xtabs,
+acidjs-xtabs *
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+acidjs-xtabs acidjs-xtabs-pane,
+acidjs-xtabs acidjs-xtabs-item > input
+{
+    display: none;
+}
+
+acidjs-xtabs acidjs-xtabs-pane,
+acidjs-xtabs acidjs-xtabs-item > input:checked + label
+{
+    background: #319b31;
+}
+
+acidjs-xtabs acidjs-xtabs-list,
+acidjs-xtabs acidjs-xtabs-item > label
+{
+    position: relative;
+}
+
+acidjs-xtabs
+{
+    font-family: Arial, Verdana, Helvetcia, Sans-serif;
+    color: #fff;
+}
+
+acidjs-xtabs acidjs-xtabs-pane
+{
+    position: absolute;
+    padding: 6px;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    white-space: normal;
+}
+
+acidjs-xtabs acidjs-xtabs-item > label
+{
+    display: inline-block;
+    background: rgb(159, 202, 159);
+    line-height: 32px;
+    padding: 0 18px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 0;
+    margin: 0 1px 0 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+acidjs-xtabs acidjs-xtabs-item:first-child
+{
+    margin-left: 12px;
+}
+
+acidjs-xtabs acidjs-xtabs-item > input:disabled + label
+{
+    background: #ccc;
+    color: #666;
+    opacity: .5;
+    cursor: default;
+}
+
+acidjs-xtabs acidjs-xtabs-list
+{
+    white-space: nowrap;
+}
+acidjs-xtabs-pane {
+    background: #fff !important;
+}

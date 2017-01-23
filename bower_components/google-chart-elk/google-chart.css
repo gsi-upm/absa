@@ -1,0 +1,48 @@
+:host {
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 300px;
+}
+
+:host([type="gauge"]) {
+  width: 300px;
+  height: 300px;
+}
+
+#chartdiv {
+  width: 100%;
+}
+
+.top-bar{
+  width: 100%; 
+  background-color: var(--dark-primary-color); 
+  border-radius: 5px 5px 0 0; 
+  color: white; 
+  text-align: center; 
+  height: 35px; 
+  line-height: 35px;
+}
+
+.top-bar span {
+  vertical-align: middle;
+}
+
+iron-icon {
+  margin-right: 8px;
+  width: 21px;
+  height: 21px;
+}
+
+paper-icon-button.green {
+  color: var(--paper-green-500);
+}
+
+paper-icon-button.green:hover {
+  background: var(--paper-green-50);
+  border-radius: 50%;
+}
+
+paper-material {
+  background-color: #ffffff
+}

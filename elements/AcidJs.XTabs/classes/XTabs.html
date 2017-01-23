@@ -1,0 +1,109 @@
+<link rel="stylesheet" href="../styles/XTabs.css" />
+<script src="../lib/jquery-2.1.1.min.js"></script>
+<script>
+/*
+ * Tabs HTML5 Web Component by Martin Ivanov (@wemakesitesnet)
+ * More info regarding this exciting new technology: http://webcomponents.org/, http://www.x-tags.org/, http://www.polymer-project.org/
+ * @author Martin Ivanov
+ * @url developer website: http://wemakesites.net/
+ * @url developer twitter: https://twitter.com/#!/wemakesitesnet
+ * @url developer blog http://acidmartin.wordpress.com/
+ **/
+(function() {
+    
+    "use strict";
+    
+    var
+        WIN = window,
+        XTAG = WIN.xtag,
+        TEMPLATES = {
+            "acidjs.x.tab": [
+                '<acidjs-xtabs-item>',
+                    '<input hidden type="radio" name="{{name}}" id="{{name}}-{{i}}-radio"{{selected}}{{disabled}} />',
+                    '<label title="{{hint}}" for="{{name}}-{{i}}-radio">{{label}}</label>',
+                    '{{paneContent}}',
+                '</acidjs-xtabs-item>'        
+            ],
+            checked: [
+                ' checked="checked"'
+            ],
+            disabled: [
+                ' disabled="disabled"'
+            ]
+        };
+    
+    XTAG.register("acidjs-xtabs-list", {});
+    
+    XTAG.register("acidjs-xtabs-item", {});
+    
+    XTAG.register("acidjs-xtabs-pane", {});
+    
+    XTAG.register("acidjs-xtabs", {
+        lifecycle: {
+            created: function() {
+                
+                var
+                    that = this,
+                    tabs = $(this),
+                    selectedTab = window.parseInt(tabs.attr("selectedtab"), 10) || 0,
+                    name = tabs.attr("name") || "",
+                    panes = tabs.find("acidjs-xtabs-pane"),
+                    panesHtml = [];
+                
+                panes.each(function(i) {
+                    
+                    var
+                        pane = $(this),
+                        paneData = {
+                            name: name,
+                            i: i,
+                            label: pane.attr("label") || "",
+                            paneContent: $("<div />").append(pane.clone()).html(),
+                            selected: i === selectedTab ? TEMPLATES.checked : "",
+                            disabled: $(this).attr("enabled") === "false" ? that.template("disabled") : "",
+                            hint: pane.attr("hint") || ""
+                        };
+                    
+                    panesHtml.push(that.template("acidjs.x.tab", paneData));
+                });
+                
+                panesHtml = panesHtml.join("");
+                
+                tabs
+                    .html('<acidjs-xtabs-list>' + panesHtml + '</acidjs-xtabs-list>')
+                    .css({
+                        width: tabs.attr("width") || "100%",
+                        height: tabs.attr("height") || 200
+                    })
+                    .find("acidjs-xtabs-pane").css({
+                        height: (tabs.attr("height") || 200) - tabs.find("acidjs-xtabs-item:first-child > label").height()
+                    });
+            }
+        },
+        
+        methods: {
+                        
+            template: function(view, model) {
+                 var 
+                     html = TEMPLATES[view] || [];
+
+                 model = model || {};
+
+                 html = html.join("");
+
+                 for(var key in model) {
+                     if(model.hasOwnProperty(key)) {
+                         var
+                             value = model[key],
+                             regexp = new RegExp("{{" + key + "}}", "g");
+
+                         html = html.replace(regexp, value);
+                     }
+                 }
+
+                 return html;
+             }
+        }
+    });
+}());
+</script>

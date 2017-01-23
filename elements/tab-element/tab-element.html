@@ -1,0 +1,35 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+
+<dom-module id="tab-element">
+
+<style is="custom-style">
+  @import url("../../styles/app-theme.html");
+   paper-tabs, paper-toolbar {
+      background-color: #F5B424; 
+      color: #fff;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    paper-tabs[noink][no-bar] paper-tab.iron-selected {
+      color: #04419B;
+    }
+    
+</style>
+<link rel="import" type="css" href="tab-element.css">
+
+ <template>
+ 
+
+
+ </template>
+ <script>
+
+    Polymer({
+
+      is: 'tab-element'
+
+      });
+ </script>
+</dom-module>

@@ -1,0 +1,114 @@
+<!--
+Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
+
+<dom-module id="yasgui-ui">
+  
+  <template>
+
+     <style>
+      .yasqe {
+        z-index: 0;
+      }
+      .yasr, .yasr_header *{
+        z-index: 0;
+      }
+      paper-menu {
+        display: block;
+        color: blue;
+      }
+      paper-dropdown-menu {
+        text-align: left;
+        margin: auto;
+        width: 100%;
+        color: blue;
+      }
+      paper-dropdown-menu.letters {
+        width: 90px;
+        color: blue;
+      }
+      paper-menu-button {
+        width: 100%;
+      }
+    </style>
+    <paper-dropdown-menu label="Select your query">
+            <paper-menu class="dropdown-content" on-iron-select="_itemSelected" selected="{{selected}}">
+              <template is="dom-repeat" items="{{queries}}" as="query">
+                <paper-item>[[query.name]]</paper-item>
+              </template>
+            </paper-menu>
+          </paper-dropdown-menu>
+    <div id="yasqe"></div>
+    <div id="yasr"></div>
+
+  </template>
+
+<script>
+
+  Polymer({
+      is: 'yasgui-ui',
+      properties: {
+        query: {
+          type: String,
+          observer: '_queryValueChanged'
+        },
+        endpoint: {
+          type: String,
+          value: 'http://dbpedia.org/sparql',
+          observer: '_endpointChanged'
+        },
+        selected: {
+          type: Number,
+          value: 0
+        },
+        queries: {
+          type: Array
+        },
+        yasqe: Object,
+        yasr: Object
+      },
+      ready: function() {
+        YASQE.defaults.value = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>  \nPREFIX type: <http://dbpedia.org/class/yago/> \nPREFIX prop: <http://dbpedia.org/property/> \n\nSELECT ?country_name ?population WHERE { \n   ?country a type:LandlockedCountries ; \n   rdfs:label ?country_name ; \n   prop:populationEstimate ?population . \n   FILTER (?population > 15000000) .\n}";
+
+        this.yasr = YASR(this.$.yasr);
+        this.yasqe = YASQE(this.$.yasqe, {
+          sparql: {
+            showQueryButton: true,
+            endpoint: this.endpoint
+          } 
+        });
+        /**
+        * Set some of the hooks to link YASR and YASQE
+        */
+        this.yasr.options.getUsedPrefixes = this.yasqe.getPrefixesFromQuery;
+        this.yasqe.options.sparql.callbacks.complete = this.yasr.setResponse;
+
+        if (!this.yasr.storage.get("yasr_showcase_results"))  this.yasqe.query();
+      },
+      /**
+      * Change the query value when it has chan
+      */
+      _itemSelected: function(e){
+        for(var i = 0; i < this.queries.length; i++){
+          if(this.queries[i].name == e.target.selectedItem.innerText){
+            this.query = this.queries[i].val
+          }
+        }
+      },
+      _queryValueChanged: function(){
+        this.yasqe.setValue(this.query)
+      },
+      _endpointChanged: function(){
+        //Structure build
+      }
+    });
+</script>
+</dom-module>
