@@ -1,0 +1,16 @@
+{
+    "name": "Aspy",
+    "module": "aspy",
+    "description": "Sentiment Aspect analyzer for restaurants",
+    "author": "militarpancho",
+    "version": "0.1",
+    "extra_params": {
+        "language": {
+            "aliases": ["language", "l"],
+            "required": true,
+            "options": ["en"],
+            "default": "en"
+        }
+    },
+    "requirements": {lxml}
+}

@@ -1,0 +1,496 @@
+[
+	{
+		"class": "food",
+		"list": {
+			
+				"delicious": 61,
+				"pizza": 53,
+				"sushi": 46,
+			
+				"menu": 37,
+			
+				"fresh": 39,
+			
+				"dishes": 37,
+			
+				"chicken": 28
+			,
+			
+				"fish": 27
+			,
+			
+				"rice": 26
+			,
+			
+				"cheese": 25
+			,
+			
+				"salad": 17
+			,
+			
+				"lobster": 17
+			,
+			
+				"dessert": 17
+			,
+			
+				"sauce": 16
+			,
+			
+				"ingredients": 16
+			,
+			
+				"crab": 14
+			,
+			
+				"bland": 20
+			,
+			
+				"spicy": 19
+			,
+			
+				"shrimp": 19
+			,
+			
+				"appetizer": 15
+			,
+			
+				"goat": 14
+			,
+			
+				"lamb": 13
+			,
+			
+				"limited": 12
+			,
+			
+				"salmon": 11
+			,
+			
+				"soup": 10
+			,
+			
+				"tasted": 10
+			,
+			
+				"portion": 9
+			,
+			
+				"crispy": 8
+			,
+			
+				"congee": 8
+			,
+			
+				"penne": 8
+			,
+			
+				"fried": 8
+			,
+			
+				"bbq": 7
+			,
+			
+				"oily": 7
+			,
+			
+				"filet": 7
+			,
+			
+				"entree": 7
+			,
+			
+				"unique": 7
+			,
+			
+				"piece": 6
+			,
+			
+				"cake": 6
+			,
+			
+				"toppings": 6
+			,
+			
+				"salty": 6
+			,
+			
+				"salads": 6
+			,
+			
+				"fries": 6
+			,
+			
+				"buns": 6
+			,
+			
+				"sea": 6
+			,
+			
+				"scallops": 6
+			,
+			
+				"bread": 6
+			,
+			
+				"beef": 6
+			,
+			
+				"meat": 6
+			,
+			
+				"mozzarella": 6
+			,
+			
+				"duck": 6
+			,
+			
+				"seabass": 5
+			,
+			
+				"regular": 5
+			,
+			
+				"tasteless": 5
+			,
+			
+				"couldve": 5
+			,
+			
+				"ravioli": 5
+			,
+			
+				"chai": 5
+			,
+			
+				"w": 5
+			,
+			
+				"dissapointing": 5
+			,
+			
+				"roti": 5
+			,
+			
+				"bones": 5
+			,
+			
+				"calamari": 5
+			,
+			
+				"kinda": 5
+			,
+			
+				"sardines": 5
+			,
+			
+				"ice": 5
+			,
+			
+				"egg": 5
+			,
+			
+				"fishiest": 5
+			,
+			
+				"biscuits": 5
+			,
+			
+				"sausages": 5
+			,
+			
+				"chips": 5
+			,
+			
+				"vegetarian": 5
+			,
+			
+				"mussles": 5
+			,
+			
+				"onion": 4
+			,
+			
+				"36": 4
+			,
+			
+				"chocolate": 4
+			,
+			
+				"soupy": 4
+			,
+			
+				"scallion": 4
+			,
+			
+				"homemade": 4
+			,
+			
+				"awsome": 4
+			,
+			
+				"mushroom": 4
+			,
+			
+				"sizes": 4
+			,
+			
+				"overly": 4
+			,
+			
+				"steamed": 4
+			,
+			
+				"thinlysliced": 4
+			,
+			
+				"fry": 4
+			,
+			
+				"jelly": 4
+			,
+			
+				"onions": 4
+			,
+			
+				"roast": 4
+			,
+			
+				"sandwiches": 4
+			,
+			
+				"porcini": 4
+			,
+			
+				"mains": 4
+			,
+			
+				"desserts": 4
+			,
+			
+				"quantity": 4
+			,
+			
+				"nosofresh": 4
+			,
+			
+				"antipasta": 4
+			,
+			
+				"delicate": 4
+			,
+			
+				"piece": 4
+			
+		}
+	},
+	
+	{	"class": "service",
+		"list": {
+			
+				"staff": 34
+			,
+			
+				"friendly": 29
+			,
+			
+				"fast": 16
+			,
+			
+				"attentive": 11
+			,
+			
+				"waiter": 10
+			,
+			
+				"asked": 9
+			,
+			
+				"prompt": 8
+			,
+			
+				"rude": 6
+			,
+			
+				"slow": 7
+			,
+			
+				"waitstaff": 7
+			,
+			
+				"manager": 6
+			,
+			
+				"slow": 5
+			,
+			
+				"hostess": 4
+			,
+			
+				"impeccable": 4
+			,
+			
+				"crew": 4
+			,
+			
+				"treated": 3
+			,
+			
+				"smile": 3
+			,
+			
+				"rush": 3
+			,
+			
+				"waitress": 6
+			
+		}
+	},
+	{
+		"class": "drinks",
+		"list": {
+			
+				"wine": 31
+		
+			,
+			
+				"wines": 10
+			,
+			
+				"glass": 7
+			,
+			
+				"martini": 4
+			,
+			
+				"vanilla": 4
+			,
+			
+				"homey": 4
+			,
+			
+				"beer": 4
+			,
+			
+				"beers": 4
+			,
+			
+				"sake": 4
+			,
+			
+				"bottles": 3
+			,
+			
+				"champagne": 3
+			,
+			
+				"bottle": 3
+			,
+			
+				"sangria": 1
+			,
+			
+				"coffee": 1
+			,
+			
+				"mojito": 1
+			
+		}
+	 },
+	{
+		"class": "ambience",
+		"list": {
+			
+				"atmosphere": 27
+		
+			,
+			
+				"decor": 23
+			,
+			
+				"ambience": 13
+			,
+			
+				"romantic": 10
+			,
+			
+				"music": 8
+			,
+			
+				"fun": 7
+			,
+			
+				"cozy": 7
+			,
+			
+				"ambiance": 6
+			,
+			
+				"vibe": 5
+			,
+			
+				"jazz": 5
+			,
+			
+				"outdoor": 5
+			,
+			
+				"noisy": 4
+			,
+			
+				"scene": 4
+			,
+			
+				"tranquility": 1
+			,
+			
+				"quiet": 2
+			,
+			
+				"relax": 2
+			
+		}
+	},
+	{
+		"class": "location",
+		"list": {
+			
+				"location": 4
+			,
+			
+				"view": 4
+			,
+			
+				"avenue": 3
+			,
+			
+				"located": 2
+			
+		}
+	},
+	{
+		"class": "restaurant",
+		"list": {
+			
+				"prices": 27
+		
+			,
+			
+				"spot": 14
+			,
+			
+				"favorite": 9
+			,
+			
+				"city": 9
+			,
+			
+				"trip": 8
+			,
+			
+				"gem": 7
+			
+			
+		}
+	}
+]

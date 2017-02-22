@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NAF xml:lang="en" version="v1.naf">
+  <nafHeader>
+    <linguisticProcessors layer="text">
+      <lp name="ixa-pipe-tok-en" beginTimestamp="2016-06-23T22:55:58+0200" endTimestamp="2016-06-23T22:55:59+0200" version="1.8.4-99f13feb657dccf48658c8021592867ae602094a" hostname="MacBook-Pro-de-Manu.local" />
+    </linguisticProcessors>
+    <linguisticProcessors layer="terms">
+      <lp name="ixa-pipe-pos-en-pos-perceptron-autodict01-conll09" beginTimestamp="2016-06-23T22:56:00+0200" endTimestamp="2016-06-23T22:56:00+0200" version="1.5.1-ecc45557cc73e96d9634cde7b50eb78533e0c2f6" hostname="MacBook-Pro-de-Manu.local" />
+    </linguisticProcessors>
+    <linguisticProcessors layer="entities">
+      <lp name="ixa-pipe-nerc-ote-2015-restaurants" beginTimestamp="2016-06-23T22:56:01+0200" endTimestamp="2016-06-23T22:56:01+0200" version="1.5.4-0b63684ca9edf3dbdf56856c0372723c1e0e2023" hostname="MacBook-Pro-de-Manu.local" />
+    </linguisticProcessors>
+  </nafHeader>
+  <raw><![CDATA[It was good Lasagna but the service was rude]]></raw>
+  <text>
+    <wf id="w1" offset="0" length="2" sent="1" para="1">It</wf>
+    <wf id="w2" offset="3" length="3" sent="1" para="1">was</wf>
+    <wf id="w3" offset="7" length="4" sent="1" para="1">good</wf>
+    <wf id="w4" offset="12" length="7" sent="1" para="1">Lasagna</wf>
+    <wf id="w5" offset="20" length="3" sent="1" para="1">but</wf>
+    <wf id="w6" offset="24" length="3" sent="1" para="1">the</wf>
+    <wf id="w7" offset="28" length="7" sent="1" para="1">service</wf>
+    <wf id="w8" offset="36" length="3" sent="1" para="1">was</wf>
+    <wf id="w9" offset="40" length="4" sent="1" para="1">rude</wf>
+  </text>
+  <terms>
+    <!--It-->
+    <term id="t1" type="close" lemma="it" pos="Q" morphofeat="PRP">
+      <span>
+        <target id="w1" />
+      </span>
+    </term>
+    <!--was-->
+    <term id="t2" type="open" lemma="be" pos="V" morphofeat="VBD">
+      <span>
+        <target id="w2" />
+      </span>
+    </term>
+    <!--good-->
+    <term id="t3" type="open" lemma="good" pos="G" morphofeat="JJ">
+      <span>
+        <target id="w3" />
+      </span>
+    </term>
+    <!--Lasagna-->
+    <term id="t4" type="open" lemma="lasagna" pos="N" morphofeat="NN">
+      <span>
+        <target id="w4" />
+      </span>
+    </term>
+    <!--but-->
+    <term id="t5" type="close" lemma="but" pos="C" morphofeat="CC">
+      <span>
+        <target id="w5" />
+      </span>
+    </term>
+    <!--the-->
+    <term id="t6" type="close" lemma="the" pos="D" morphofeat="DT">
+      <span>
+        <target id="w6" />
+      </span>
+    </term>
+    <!--service-->
+    <term id="t7" type="open" lemma="service" pos="N" morphofeat="NN">
+      <span>
+        <target id="w7" />
+      </span>
+    </term>
+    <!--was-->
+    <term id="t8" type="open" lemma="be" pos="V" morphofeat="VBD">
+      <span>
+        <target id="w8" />
+      </span>
+    </term>
+    <!--rude-->
+    <term id="t9" type="open" lemma="rude" pos="G" morphofeat="JJ">
+      <span>
+        <target id="w9" />
+      </span>
+    </term>
+  </terms>
+  <entities>
+    <entity id="e1" type="TARGET">
+      <references>
+        <!--Lasagna-->
+        <span>
+          <target id="t4" />
+        </span>
+      </references>
+    </entity>
+    <entity id="e2" type="TARGET">
+      <references>
+        <!--service-->
+        <span>
+          <target id="t7" />
+        </span>
+      </references>
+    </entity>
+  </entities>
+</NAF>

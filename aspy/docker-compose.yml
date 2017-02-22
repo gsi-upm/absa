@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+  aspy:
+    build: .
+    ports:
+     - "5000:5000"
+    networks:
+      - web-tier
+    depends_on:
+      - ixa-pipes 
+      - corenlp
+    volumes:
+      - ./:/usr/src/app/aspy
+
+  ixa-pipes:
+    build: ixa-pipes
+    command: "/usr/local/bin/run-ixa-tok.sh && /usr/local/bin/run-ixa-pos.sh && /usr/local/bin/run-ixa-nerc.sh"
+    networks:
+      - web-tier
+    volumes:
+      - ./ixa-pipes/data:/data
+      - ./ixa-pipes/ixa-pipe-nerc:/ixa-pipe-nerc
+      - ./ixa-pipes/ixa-pipe-pos:/ixa-pipe-pos
+      - ./ixa-pipes/ixa-pipe-tok:/ixa-pipe-tok
+    ports:
+      - "2040:2040"
+      - "2050:2050"
+      - "2060:2060"
+  corenlp:
+    image: oaraque/corenlpserver
+    ports:
+      - "9000:9000"
+    networks:
+      - web-tier
+
+networks:
+  web-tier:
+    driver: bridge
