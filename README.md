@@ -2,7 +2,7 @@
 ==================================
 
 ##Introduction
-Absa is an analyser developed for aspects sentiment analysis of restaurant reviews. This is the result of analysis showed on an apliccation based on web components and D3.js. To view your data you can use widgets and visualize it through them.
+Absa is an analyser developed for aspects sentiment analysis of restaurant reviews. This is the result of analysis showed on a dashboard based on web components and D3.js. To view your data you can use widgets and visualize it through them.
 
 ##Getting Started 
 If you want to easy try Absa, just download this repository (cloning it to your computer or downloading it as a .zip) and open the main folder `absa/` in the bash console and run a simple server such as the python one `python -m SimpleHTTPServer <port>` and open the web browser with `localhost:<port>` in the url field and explore data.
@@ -14,5 +14,6 @@ Polymer is a technology based on web components, so we could make a new componen
 
 Those components will be reusable only importing the tag `<component-tag></component-tag>` and they could share information using data binding among them.
 
+##Reviews Data
 
-
+The data used for the dashboard is the Semeval 2015 ABSA dataset (Task 12) for restaurant domain, available here: http://alt.qcri.org/semeval2015/task12/
